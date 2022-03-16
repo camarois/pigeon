@@ -1,0 +1,54 @@
+{
+  "name": "pigeon",
+  "version": "1.0.0",
+  "description": "Pigeon monorepo",
+  "private": true,
+  "main": "index.js",
+  "repository": "https://github.com/camarois/pigeon.git",
+  "author": "camarois <charles.marois.quebec@gmail.com>",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "api-docs": "scripty",
+    "start": "scripty",
+    "greet": "scripty",
+    "dev": "scripty",
+    "build": "scripty",
+    "clean": "scripty",
+    "lint": "scripty",
+    "test": "scripty",
+    "prepare": "husky install"
+  },
+  "volta": {
+    "node": "16.0.0",
+    "yarn": "1.22.10"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/config-lerna-scopes": "^12.1.4",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
+    "@typescript-eslint/parser": "^4.24.0",
+    "commitlint": "^12.1.4",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^6.0.0",
+    "lerna": "^4.0.0",
+    "lerna-changelog": "^1.0.1",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0",
+    "rimraf": "^3.0.2",
+    "scripty": "^2.0.0"
+  },
+  "scripty": {
+    "path": "./scripts/workspace"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix"
+    ]
+  }
+}
